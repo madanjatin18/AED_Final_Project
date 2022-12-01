@@ -6,8 +6,8 @@
 package BusinessModel;
 
 import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
+import BusinessModel.Network.Network;
+import BusinessModel.Organization.Organization;
 import Business.Role.Role;
 import Business.Role.SystemAdministratorRole;
 import BusinessModel.UserAccount.UserAccount;

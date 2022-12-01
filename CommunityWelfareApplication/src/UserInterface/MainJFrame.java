@@ -9,8 +9,8 @@ package UserInterface;
 import BusinessModel.DB4OUtil.DB4OUtil;
 import BusinessModel.EcoSystem;
 import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
+import BusinessModel.Network.Network;
+import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
 
 import java.awt.CardLayout;
