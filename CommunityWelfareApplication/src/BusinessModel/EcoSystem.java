@@ -5,7 +5,7 @@
  */
 package BusinessModel;
 
-//import Business.Enterprise.Enterprise;
+import Business.Enterprise.Enterprise;
 import BusinessModel.Network.Network;
 import BusinessModel.Organization.Organization;
 import Business.Role.Role;
