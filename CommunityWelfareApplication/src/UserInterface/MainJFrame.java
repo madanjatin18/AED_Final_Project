@@ -8,7 +8,7 @@ package UserInterface;
 
 import BusinessModel.DB4OUtil.DB4OUtil;
 import BusinessModel.EcoSystem;
-import Business.Enterprise.Enterprise;
+import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Network.Network;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
@@ -86,6 +86,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         downJPanel = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -217,6 +218,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
         downJPanel.setBackground(new java.awt.Color(255, 255, 255));
         downJPanel.setLayout(new java.awt.CardLayout());
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UserInterface/228028375c9c3c0a85c1d4ea3b1bddf1.gif"))); // NOI18N
+        downJPanel.add(jLabel5, "card2");
+
         jSplitPane1.setRightComponent(downJPanel);
 
         getContentPane().add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 776));
@@ -372,6 +377,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton loginBtn;
