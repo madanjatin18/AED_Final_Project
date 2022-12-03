@@ -5,8 +5,8 @@
  */
 package BusinessModel.Organization;
 import Business.HelpProvider.HelpProviderDirectory;
-import Business.Role.HelpProviderRole;
-import Business.Role.Role;
+import BusinessModel.Role.HelpProviderRole;
+import BusinessModel.Role.Role;
 import java.util.HashSet;
 
 /**

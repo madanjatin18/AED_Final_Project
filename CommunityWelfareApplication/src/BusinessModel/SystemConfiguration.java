@@ -7,8 +7,8 @@ package BusinessModel;
 
 
 
-import Business.Employee.Employee;
-import Business.Role.SystemAdministratorRole;
+import BusinessModel.Employee.Employee;
+import BusinessModel.Role.SystemAdministratorRole;
 import BusinessModel.UserAccount.UserAccount;
 /**
  *

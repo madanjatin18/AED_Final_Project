@@ -7,9 +7,9 @@ package UserInterface.SystemAdministrator;
 
 import java.awt.CardLayout;
 import java.awt.Component;
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
+import BusinessModel.EcoSystem;
+import BusinessModel.Enterprise.Enterprise;
+import BusinessModel.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;

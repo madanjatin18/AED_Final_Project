@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package BusinessModel.Organization;
-import Business.Employee.EmployeeDirectory;
-import Business.Role.Role;
-import Business.UserAccount.UserAccountDirectory;
+import BusinessModel.Employee.EmployeeDirectory;
+import BusinessModel.Role.Role;
+import BusinessModel.UserAccount.UserAccountDirectory;
 import Business.Volunteer.VolunteerDirectory;
-import Business.WorkQueue.WorkQueue;
+import BusinessModel.WorkQueue.WorkQueue;
 import java.util.HashSet;
 
 /**

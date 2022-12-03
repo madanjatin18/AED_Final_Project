@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package BusinessModel.UserAccount;
-import Business.Role.Role;
-import Business.Employee.Employee;
+import BusinessModel.Role.Role;
+import BusinessModel.Employee.Employee;
 import java.util.ArrayList;
 
 /**

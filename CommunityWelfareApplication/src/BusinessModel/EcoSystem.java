@@ -5,11 +5,11 @@
  */
 package BusinessModel;
 
-import Business.Enterprise.Enterprise;
+import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Network.Network;
 import BusinessModel.Organization.Organization;
-import Business.Role.Role;
-import Business.Role.SystemAdministratorRole;
+import BusinessModel.Role.Role;
+import BusinessModel.Role.SystemAdministratorRole;
 import BusinessModel.UserAccount.UserAccount;
 import java.util.ArrayList;
 import java.util.HashSet;

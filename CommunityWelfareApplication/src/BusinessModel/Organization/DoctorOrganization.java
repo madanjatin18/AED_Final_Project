@@ -6,10 +6,10 @@
 package BusinessModel.Organization;
 
 import Business.Doctor.DoctorDirectory;
-import Business.Role.DoctorAdminRole;
-import Business.Role.DoctorUserRole;
-import Business.Role.NGOManagerRole;
-import Business.Role.Role;
+import BusinessModel.Role.DoctorAdminRole;
+import BusinessModel.Role.DoctorUserRole;
+import BusinessModel.Role.NGOManagerRole;
+import BusinessModel.Role.Role;
 import java.util.HashSet;
 
 /**

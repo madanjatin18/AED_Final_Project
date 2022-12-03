@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package BusinessModel.Organization;
-import Business.Role.Role;
-import Business.Role.VolunteerRole;
+import BusinessModel.Role.Role;
+import BusinessModel.Role.VolunteerRole;
 import Business.Volunteer.VolunteerDirectory;
 import java.util.HashSet;
 

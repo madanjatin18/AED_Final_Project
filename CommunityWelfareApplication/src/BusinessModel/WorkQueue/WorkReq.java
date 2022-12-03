@@ -16,7 +16,7 @@ import Business.HelpSeeker.HelpSeeker;
 import Business.Supplier.Supplier;
 import Business.Supplier.Supply;
 import Business.NGO.NGO;
-import Business.UserAccount.UserAccount;
+import BusinessModel.UserAccount.UserAccount;
 import Business.Volunteer.Volunteer;
 import java.util.Date;
 
