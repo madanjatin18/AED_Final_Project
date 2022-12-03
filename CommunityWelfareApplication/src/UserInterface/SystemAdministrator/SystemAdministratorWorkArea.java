@@ -6,10 +6,10 @@
 package UserInterface.SystemAdministrator;
 
 
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Organization.Organization;
+import BusinessModel.EcoSystem;
+import BusinessModel.Enterprise.Enterprise;
+import BusinessModel.Network.Network;
+import BusinessModel.Organization.Organization;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import javax.swing.JPanel;

@@ -7,15 +7,15 @@ package UserInterface.SystemAdministrator;
 
 
 
-import Business.EcoSystem;
-import Business.Employee.Employee;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Role.HospitalAdminRole;
-import Business.Role.SocialServiceAdminRole;
-import Business.Role.SupplierAdminRole;
-import Business.Role.NGOAdminRole;
-import Business.UserAccount.UserAccount;
+import BusinessModel.EcoSystem;
+import BusinessModel.Employee.Employee;
+import BusinessModel.Enterprise.Enterprise;
+import BusinessModel.Network.Network;
+import BusinessModel.Role.HospitalAdminRole;
+import BusinessModel.Role.SocialServiceAdminRole;
+import BusinessModel.Role.SupplierAdminRole;
+import BusinessModel.Role.NGOAdminRole;
+import BusinessModel.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
