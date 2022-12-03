@@ -5,7 +5,7 @@
  */
 package BusinessModel.WorkQueue;
 
-import Business.UserAccount.UserAccount;
+import BusinessModel.UserAccount.UserAccount;
 
 /**
  *
