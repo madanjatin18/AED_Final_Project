@@ -33,11 +33,11 @@ public class SystemAdministratorWorkArea extends javax.swing.JPanel {
         initComponents();
         this.downJPanel=downJPanel;
         this.ecosystem=ecosystem;
-        populateTree();
+       // populateTree();
     }
 
     
-    public void populateTree(){
+    /*public void populateTree(){
         DefaultTreeModel model = (DefaultTreeModel) networkJTree.getModel();
 
         
@@ -92,7 +92,7 @@ public class SystemAdministratorWorkArea extends javax.swing.JPanel {
         }
 
         model.reload();
-    }
+    }*/
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

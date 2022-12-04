@@ -13,7 +13,7 @@ import BusinessModel.EcoSystem;
 
 import BusinessModel.Organization.HelpSeekerOrganization;
 
-import Interface.SocialServiceEnterprise.SocialServiceAdministratorWorkArea;
+import UserInterface.SocialServiceEnterprise.SocialServiceAdministratorWorkArea;
 import UserInterface.SystemAdministrator.ManageEnterprise;
 
 

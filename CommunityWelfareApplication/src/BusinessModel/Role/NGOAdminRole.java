@@ -10,7 +10,7 @@ import BusinessModel.EcoSystem;
 import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.NGOEnterprise.NGOAdminWorkArea;
+import UserInterface.NGOEnterprise.NGOAdminWorkArea;
 import javax.swing.JPanel;
 
 

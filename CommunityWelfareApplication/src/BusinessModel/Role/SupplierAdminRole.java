@@ -15,7 +15,7 @@ import BusinessModel.EcoSystem;
 
 import BusinessModel.Role.Role.RoleType;
 
-import Interface.SupplierEnterprise.SupplierAdministratorWorkArea;
+import UserInterface.SupplierEnterprise.SupplierAdministratorWorkArea;
 
 
 /**

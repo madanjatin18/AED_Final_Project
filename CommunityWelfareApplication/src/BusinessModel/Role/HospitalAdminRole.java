@@ -8,7 +8,7 @@ import BusinessModel.EcoSystem;
 import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.HospitalEnterPrise.HospitalAdminWorkArea;
+import UserInterface.HospitalEnterPrise.HospitalAdminWorkArea;
 import javax.swing.JPanel;
 /**
  *

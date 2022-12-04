@@ -182,7 +182,7 @@ private JPanel downJPanel;
         Component[] componentArray = downJPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdministratorWorkArea sysAdminwjp = (SystemAdministratorWorkArea) component;
-        sysAdminwjp.populateTree();
+       // sysAdminwjp.populateTree(); //commented for populateTree on 3rd Dec 2022
         CardLayout layout = (CardLayout) downJPanel.getLayout();
         layout.previous(downJPanel);    
        

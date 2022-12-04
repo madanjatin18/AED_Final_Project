@@ -15,7 +15,7 @@ import BusinessModel.EcoSystem;
 
 import BusinessModel.Organization.SupplierOrganization;
 
-import Interface.SupplierManager.SupplierManagerWorkArea;
+import UserInterface.SupplierManager.SupplierManagerWorkArea;
 import javax.swing.JPanel;
 
 /**

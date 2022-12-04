@@ -11,7 +11,7 @@ import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import BusinessModel.EcoSystem;
-import Interface.NGOManager.ManagerWorkArea;
+import UserInterface.NGOManager.ManagerWorkArea;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
