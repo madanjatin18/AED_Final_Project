@@ -12,7 +12,7 @@ import BusinessModel.Organization.Organization;
 import BusinessModel.Organization.VolunteerOrganization;
 import BusinessModel.Role.Role.RoleType;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.Volunteer.VolunteerDashboard;
+import UserInterface.Volunteer.VolunteerDashboard;
 import javax.swing.JPanel;
 
 /**

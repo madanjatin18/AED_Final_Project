@@ -11,8 +11,8 @@ import BusinessModel.EcoSystem;
 import BusinessModel.Organization.DonorOrganization;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.Donor.DonorAdminWorkArea;
-import Interface.Volunteer.VolunteerAdminWorkArea;
+import UserInterface.Donor.DonorAdminWorkArea;
+import UserInterface.Volunteer.VolunteerAdminWorkArea;
 /**
  *
  * @author adhar

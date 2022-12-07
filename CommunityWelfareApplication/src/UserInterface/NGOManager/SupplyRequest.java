@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package UserInterface.NGOManager;
-import Business.Supplier.Supplier;
+import BusinessModel.Supplier.Supplier;
 import BusinessModel.EcoSystem;
 import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.Organization;

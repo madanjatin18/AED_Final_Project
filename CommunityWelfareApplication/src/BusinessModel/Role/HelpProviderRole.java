@@ -11,7 +11,7 @@ import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.HelpProviderOrganization;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.HelpProvider.HelpProviderUser.HelpProviderUserWorkArea;
+import UserInterface.HelpProvider.HelpProviderUser.HelpProviderUserWorkArea;
 import javax.swing.JPanel;
 
 /**

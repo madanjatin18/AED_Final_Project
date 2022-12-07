@@ -13,7 +13,7 @@ import BusinessModel.EcoSystem;
 import BusinessModel.Organization.HelpProviderOrganization;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.HelpProvider.HelpProviderAdminWorkArea;
+import UserInterface.HelpProvider.HelpProviderAdminWorkArea;
 
 
 /**

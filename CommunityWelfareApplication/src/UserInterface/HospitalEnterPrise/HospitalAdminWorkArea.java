@@ -12,7 +12,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 /**
  *
- * @author adhar
+ * @author madanjatin
  */
 public class HospitalAdminWorkArea extends javax.swing.JPanel {
     private JPanel downJPanel;

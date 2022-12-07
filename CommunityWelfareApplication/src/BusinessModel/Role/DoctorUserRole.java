@@ -11,8 +11,8 @@ import BusinessModel.Organization.Organization;
 import BusinessModel.Organization.DonorOrganization;
 import BusinessModel.Role.Role.RoleType;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.Donor.DonorAdminWorkArea;
-import Interface.Doctor.DoctorUser.DoctorUserWorkArea;
+import UserInterface.Donor.DonorAdminWorkArea;
+import UserInterface.Doctor.DoctorUser.DoctorUserWorkArea;
 import javax.swing.JPanel;
 /**
  *

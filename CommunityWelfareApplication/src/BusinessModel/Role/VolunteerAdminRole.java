@@ -11,7 +11,7 @@ import BusinessModel.EcoSystem;
 import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.Volunteer.VolunteerAdminWorkArea;
+import UserInterface.Volunteer.VolunteerAdminWorkArea;
 import javax.swing.JPanel;
 
 /**

@@ -15,7 +15,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 public class SocialServiceEnterprise extends Enterprise

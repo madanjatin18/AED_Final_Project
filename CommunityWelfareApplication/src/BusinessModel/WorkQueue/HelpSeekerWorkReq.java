@@ -7,7 +7,7 @@ package BusinessModel.WorkQueue;
 
 /**
  *
- * @author hp
+ * @author madanjatin
  */
 public class HelpSeekerWorkReq extends WorkReq {
     

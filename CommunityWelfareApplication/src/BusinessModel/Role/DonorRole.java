@@ -13,8 +13,8 @@ import BusinessModel.Organization.Organization;
 import BusinessModel.Organization.DonorOrganization;
 import BusinessModel.Role.Role.RoleType;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.Donor.DonorAdminWorkArea;
-import Interface.Donor.DonorUser.DonorUserWorkArea;
+import UserInterface.Donor.DonorAdminWorkArea;
+import UserInterface.Donor.DonorUser.DonorUserWorkArea;
 import javax.swing.JPanel;
 
 

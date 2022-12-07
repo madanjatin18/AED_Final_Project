@@ -7,7 +7,7 @@ package BusinessModel.WorkQueue;
 import Business.Volunteer.VolunteerDirectory;
 /**
  *
- * @author hp
+ * @author madanjatin
  */
 public class NGOWorkReq extends WorkReq {
  

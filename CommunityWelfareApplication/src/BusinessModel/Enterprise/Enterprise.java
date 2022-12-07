@@ -9,7 +9,7 @@ import BusinessModel.Organization.OrganizationDirectory;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 public abstract class Enterprise extends Organization {

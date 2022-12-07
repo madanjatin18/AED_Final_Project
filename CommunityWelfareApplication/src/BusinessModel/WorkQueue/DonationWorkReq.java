@@ -9,7 +9,7 @@ import BusinessModel.UserAccount.UserAccount;
 
 /**
  *
- * @author adhar
+ * @author madanjatin
  */
 public class DonationWorkReq extends WorkReq {
     

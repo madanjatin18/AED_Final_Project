@@ -11,7 +11,7 @@ import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.HelpSeekerOrganization;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
-import Interface.HelpSeeker.HelpSeekerUser.HelpSeekerUserWorkArea;
+import UserInterface.HelpSeeker.HelpSeekerUser.HelpSeekerUserWorkArea;
 import javax.swing.JPanel;
 
 /**

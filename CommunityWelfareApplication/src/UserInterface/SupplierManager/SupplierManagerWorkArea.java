@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package UserInterface.SupplierManager;
-import Business.Supplier.Supplier;
-import Business.Supplier.Supply;
+import BusinessModel.Supplier.Supplier;
+import BusinessModel.Supplier.Supply;
 import BusinessModel.EcoSystem;
 import BusinessModel.Enterprise.Enterprise;
 import BusinessModel.Organization.SupplierOrganization;

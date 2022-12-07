@@ -16,7 +16,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rohan
+ * @author madanjatin
  */
 public class ManageNetwork extends javax.swing.JPanel {
 private JPanel downJPanel;
