@@ -5,11 +5,11 @@
  */
 package BusinessModel.WorkQueue;
 
-import Business.UserAccount.UserAccount;
+import BusinessModel.UserAccount.UserAccount;
 
 /**
  *
- * @author adhar
+ * @author madanjatin
  */
 public class DonationWorkReq extends WorkReq {
     

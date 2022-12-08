@@ -7,9 +7,9 @@ package UserInterface.SystemAdministrator;
 
 import java.awt.CardLayout;
 import java.awt.Component;
-import Business.EcoSystem;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
+import BusinessModel.EcoSystem;
+import BusinessModel.Enterprise.Enterprise;
+import BusinessModel.Network.Network;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -19,7 +19,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rohan
+ * @author madanjatin
  */
 public class ManageEnterprise extends javax.swing.JPanel {
      private JPanel downJPanel;
@@ -201,7 +201,7 @@ public class ManageEnterprise extends javax.swing.JPanel {
         Component[] componentArray = downJPanel.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SystemAdministratorWorkArea sysAdminwjp = (SystemAdministratorWorkArea) component;
-        sysAdminwjp.populateTree();
+        //sysAdminwjp.populateTree(); //commented for populateTree on 3rd Dec 2022
 
         CardLayout layout = (CardLayout) downJPanel.getLayout();
         layout.previous(downJPanel);

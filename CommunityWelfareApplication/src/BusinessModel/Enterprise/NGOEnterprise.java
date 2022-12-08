@@ -12,7 +12,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author adhar
+ * @author akhileshdongre
  */
 public class NGOEnterprise extends Enterprise {
 

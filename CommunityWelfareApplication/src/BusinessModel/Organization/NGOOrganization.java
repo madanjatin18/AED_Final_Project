@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package BusinessModel.Organization;
-import Business.NGO.NGODirectory;
-import Business.Role.NGOAdminRole;
-import Business.Role.NGOManagerRole;
-import Business.Role.Role;
+import BusinessModel.NGO.NGODirectory;
+import BusinessModel.Role.NGOAdminRole;
+import BusinessModel.Role.NGOManagerRole;
+import BusinessModel.Role.Role;
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class NGOOrganization extends Organization {
