@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package BusinessModel.Organization;
-import Business.HelpSeeker.HelpSeekerDirectory;
+import BusinessModel.HelpSeeker.HelpSeekerDirectory;
 import BusinessModel.Role.HelpSeekerRole;
 import BusinessModel.Role.Role;
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class HelpSeekerOrganization extends Organization{

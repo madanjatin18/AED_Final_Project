@@ -7,13 +7,13 @@ package BusinessModel.Organization;
 import BusinessModel.Employee.EmployeeDirectory;
 import BusinessModel.Role.Role;
 import BusinessModel.UserAccount.UserAccountDirectory;
-import Business.Volunteer.VolunteerDirectory;
+import BusinessModel.Volunteer.VolunteerDirectory;
 import BusinessModel.WorkQueue.WorkQueue;
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public abstract class Organization {

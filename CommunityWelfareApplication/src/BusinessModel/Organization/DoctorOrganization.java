@@ -5,7 +5,7 @@
  */
 package BusinessModel.Organization;
 
-import Business.Doctor.DoctorDirectory;
+import BusinessModel.Doctor.DoctorDirectory;
 import BusinessModel.Role.DoctorAdminRole;
 import BusinessModel.Role.DoctorUserRole;
 import BusinessModel.Role.NGOManagerRole;
@@ -14,7 +14,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author adhar
+ * @author shivanishekhawat
  */
 public class DoctorOrganization extends Organization{
      DoctorDirectory doclist;

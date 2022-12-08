@@ -12,7 +12,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class SupplierOrganization extends Organization {

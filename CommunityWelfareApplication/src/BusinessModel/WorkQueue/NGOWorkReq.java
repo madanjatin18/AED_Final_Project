@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package BusinessModel.WorkQueue;
-import Business.Volunteer.VolunteerDirectory;
+import BusinessModel.Volunteer.VolunteerDirectory;
 /**
  *
  * @author madanjatin

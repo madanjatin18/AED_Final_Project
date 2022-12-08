@@ -6,12 +6,12 @@
 package BusinessModel.Organization;
 import BusinessModel.Role.Role;
 import BusinessModel.Role.VolunteerRole;
-import Business.Volunteer.VolunteerDirectory;
+import BusinessModel.Volunteer.VolunteerDirectory;
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class VolunteerOrganization extends Organization {
