@@ -4,11 +4,11 @@
  * and open the template in the editor.
  */
 package BusinessModel.Network;
-import BusinessModel.Enterprise.EnterpriseDirectory;
+import Business.Enterprise.EnterpriseDirectory;
 
 /**
  *
- * @author shivanishekhawat
+ * @author hp
  */
 
 
