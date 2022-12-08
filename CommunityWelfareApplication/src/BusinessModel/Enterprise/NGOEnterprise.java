@@ -5,14 +5,14 @@
  */
 package BusinessModel.Enterprise;
 
-import Business.Role.NGOAdminRole;
-import Business.Role.NGOManagerRole;
-import Business.Role.Role;
+import BusinessModel.Role.NGOAdminRole;
+import BusinessModel.Role.NGOManagerRole;
+import BusinessModel.Role.Role;
 import java.util.HashSet;
 
 /**
  *
- * @author adhar
+ * @author akhileshdongre
  */
 public class NGOEnterprise extends Enterprise {
 

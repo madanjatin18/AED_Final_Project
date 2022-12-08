@@ -4,19 +4,18 @@
  * and open the template in the editor.
  */
 package BusinessModel.Enterprise;
-import Business.Organization.Organization;
-import Business.Role.HelpProviderAdminRole;
-import Business.Role.HelpSeekerAdminRole;
-import Business.Role.SocialServiceAdminRole;
-
-import Business.Role.Role;
-import Business.Role.VolunteerAdminRole;
+import BusinessModel.Organization.Organization;
+import BusinessModel.Role.HelpProviderAdminRole;
+import BusinessModel.Role.HelpSeekerAdminRole;
+import BusinessModel.Role.SocialServiceAdminRole;
+import BusinessModel.Role.Role;
+import BusinessModel.Role.VolunteerAdminRole;
 
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 public class SocialServiceEnterprise extends Enterprise

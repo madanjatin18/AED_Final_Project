@@ -5,9 +5,9 @@
  */
 package BusinessModel.UserAccount;
 
-import Business.Employee.Employee;
-import Business.Role.Role;
-import Business.WorkQueue.WorkQueue;
+import BusinessModel.Employee.Employee;
+import BusinessModel.Role.Role;
+import BusinessModel.WorkQueue.WorkQueue;
 
 /**
  *

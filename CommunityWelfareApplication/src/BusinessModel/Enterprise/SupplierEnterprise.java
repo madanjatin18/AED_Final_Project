@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package BusinessModel.Enterprise;
-import Business.Role.SupplierManagerRole;
-import Business.Role.Role;
+import BusinessModel.Role.SupplierManagerRole;
+import BusinessModel.Role.Role;
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 public class SupplierEnterprise extends Enterprise 

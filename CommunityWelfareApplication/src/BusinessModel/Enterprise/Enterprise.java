@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package BusinessModel.Enterprise;
-import Business.Organization.Organization;
-import Business.Organization.OrganizationDirectory;
+import BusinessModel.Organization.Organization;
+import BusinessModel.Organization.OrganizationDirectory;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 public abstract class Enterprise extends Organization {

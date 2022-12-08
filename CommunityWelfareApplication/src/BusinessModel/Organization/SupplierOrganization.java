@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package BusinessModel.Organization;
-import Business.Role.Role;
-import Business.Role.SupplierAdminRole;
-import Business.Role.SupplierManagerRole;
+import BusinessModel.Role.Role;
+import BusinessModel.Role.SupplierAdminRole;
+import BusinessModel.Role.SupplierManagerRole;
 import Business.Supplier.SupplierDirectory;
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class SupplierOrganization extends Organization {

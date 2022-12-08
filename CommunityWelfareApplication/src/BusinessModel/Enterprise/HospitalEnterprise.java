@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 package BusinessModel.Enterprise;
-import Business.Role.DoctorUserRole;
-import Business.Role.HospitalAdminRole;
-import Business.Role.Role;
+import BusinessModel.Role.DoctorUserRole;
+import BusinessModel.Role.HospitalAdminRole;
+import BusinessModel.Role.Role;
 
 import java.util.HashSet;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 

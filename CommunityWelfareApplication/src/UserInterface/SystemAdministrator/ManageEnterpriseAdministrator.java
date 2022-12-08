@@ -7,15 +7,15 @@ package UserInterface.SystemAdministrator;
 
 
 
-import Business.EcoSystem;
-import Business.Employee.Employee;
-import Business.Enterprise.Enterprise;
-import Business.Network.Network;
-import Business.Role.HospitalAdminRole;
-import Business.Role.SocialServiceAdminRole;
-import Business.Role.SupplierAdminRole;
-import Business.Role.NGOAdminRole;
-import Business.UserAccount.UserAccount;
+import BusinessModel.EcoSystem;
+import BusinessModel.Employee.Employee;
+import BusinessModel.Enterprise.Enterprise;
+import BusinessModel.Network.Network;
+import BusinessModel.Role.HospitalAdminRole;
+import BusinessModel.Role.SocialServiceAdminRole;
+import BusinessModel.Role.SupplierAdminRole;
+import BusinessModel.Role.NGOAdminRole;
+import BusinessModel.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rohan
+ * @author madanjatin
  */
 public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
 
@@ -293,7 +293,7 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         Component component = componentArray[componentArray.length - 1];
         
         SystemAdministratorWorkArea sysAdminwjp = (SystemAdministratorWorkArea) component;
-        sysAdminwjp.populateTree();
+        //sysAdminwjp.populateTree(); //commented for populateTree on 3rd Dec 2022
         CardLayout layout = (CardLayout) downJPanel.getLayout();
         layout.previous(downJPanel);
     }//GEN-LAST:event_backBtnActionPerformed

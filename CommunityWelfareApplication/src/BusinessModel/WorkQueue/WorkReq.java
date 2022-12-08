@@ -7,17 +7,17 @@ package BusinessModel.WorkQueue;
 
 /**
  *
- * @author hp
+ * @author madanjatin
  */
 
 
-import Business.HelpProvider.HelpProvider;
-import Business.HelpSeeker.HelpSeeker;
+import BusinessModel.HelpProvider.HelpProvider;
+import BusinessModel.HelpSeeker.HelpSeeker;
 import Business.Supplier.Supplier;
 import Business.Supplier.Supply;
-import Business.NGO.NGO;
-import Business.UserAccount.UserAccount;
-import Business.Volunteer.Volunteer;
+import BusinessModel.NGO.NGO;
+import BusinessModel.UserAccount.UserAccount;
+import BusinessModel.Volunteer.Volunteer;
 import java.util.Date;
 
 
