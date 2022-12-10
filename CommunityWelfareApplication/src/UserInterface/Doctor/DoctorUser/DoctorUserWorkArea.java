@@ -16,6 +16,7 @@ import BusinessModel.UserAccount.UserAccount;
 import BusinessModel.WorkQueue.HelpSeekerWorkReq;
 
 import BusinessModel.WorkQueue.WorkReq;
+import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 
 import javax.swing.JPanel;
@@ -82,6 +83,7 @@ public class DoctorUserWorkArea extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         requestJTable = new javax.swing.JTable();
         completeWorkBtn = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -139,6 +141,14 @@ public class DoctorUserWorkArea extends javax.swing.JPanel {
             }
         });
         add(completeWorkBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 370, 757, 36));
+
+        jButton1.setText("Record Vital Signs");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void completeWorkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_completeWorkBtnActionPerformed
@@ -159,9 +169,20 @@ public class DoctorUserWorkArea extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_completeWorkBtnActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+       // downJPanel.removeAll();
+    DocEncounter DocEncounterJPanel= new DocEncounter(downJPanel);
+    downJPanel.add("DocEncounter",DocEncounterJPanel);
+    CardLayout crdLyt=(CardLayout)downJPanel.getLayout();
+    crdLyt.next(downJPanel);
+    //db4outil.storeSystem(ecosystem);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton completeWorkBtn;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

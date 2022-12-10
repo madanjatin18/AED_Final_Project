@@ -120,7 +120,7 @@ public class SupplyRequest extends javax.swing.JPanel {
                 .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(269, 269, 269)
                 .addComponent(jLabel1)
-                .addContainerGap(397, Short.MAX_VALUE))
+                .addContainerGap(394, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -13,8 +13,8 @@ package BusinessModel.WorkQueue;
 
 import BusinessModel.HelpProvider.HelpProvider;
 import BusinessModel.HelpSeeker.HelpSeeker;
-import Business.Supplier.Supplier;
-import Business.Supplier.Supply;
+import BusinessModel.Supplier.Supplier;
+import BusinessModel.Supplier.Supply;
 import BusinessModel.NGO.NGO;
 import BusinessModel.UserAccount.UserAccount;
 import BusinessModel.Volunteer.Volunteer;

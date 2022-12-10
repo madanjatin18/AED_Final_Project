@@ -18,7 +18,7 @@ import UserInterface.HelpProvider.HelpProviderAdminWorkArea;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 public class HelpProviderAdminRole extends Role {
     

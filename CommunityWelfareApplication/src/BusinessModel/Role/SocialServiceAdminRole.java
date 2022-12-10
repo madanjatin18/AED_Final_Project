@@ -19,7 +19,7 @@ import UserInterface.SystemAdministrator.ManageEnterprise;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 
 public class SocialServiceAdminRole extends Role

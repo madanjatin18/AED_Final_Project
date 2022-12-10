@@ -8,12 +8,21 @@ import BusinessModel.Employee.Employee;
 import BusinessModel.Organization.NGOOrganization;
 import BusinessModel.Organization.Organization;
 import BusinessModel.Organization.OrganizationDirectory;
+import static datechooser.beans.PermanentBean.dispose;
 //import com.sun.glass.events.KeyEvent;
 import java.awt.event.KeyEvent;
 import java.awt.CardLayout;
+import java.awt.Image;
+import java.io.File;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import UserInterface.Profile.ComputerVision;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.table.DefaultTableModel;
+
+
 /**
  *
  * @author madanjatin
@@ -21,12 +30,16 @@ import javax.swing.table.DefaultTableModel;
 public class ManageOrganizationEmployee extends javax.swing.JPanel {
     private OrganizationDirectory organizationDirectory;
     private JPanel downJPanel;
+    String selectedImagePath;
     
     /**
      * Creates new form ManageOrganizationEmployee
      */
     public ManageOrganizationEmployee(JPanel downJPanel, OrganizationDirectory organizationDirectory) {
         initComponents();
+        
+        ProfileTxtField.setText("");
+        ProfileTxtField.setVisible(false);
         this.downJPanel = downJPanel;
         this.organizationDirectory = organizationDirectory;
         
@@ -81,7 +94,7 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         backBtn = new javax.swing.JButton();
         addBtn = new javax.swing.JButton();
-        nameTxtField = new javax.swing.JTextField();
+        phoneTxtField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         selectOrganizationJComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
@@ -89,6 +102,12 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         employeeTable = new javax.swing.JTable();
+        ProfileTxtField = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        uploadBtn = new javax.swing.JButton();
+        captureBtn = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -114,7 +133,7 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(backBtn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 326, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(240, 240, 240))
         );
@@ -137,24 +156,24 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
                 addBtnActionPerformed(evt);
             }
         });
-        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 230, 87, -1));
+        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 520, 100, 20));
 
-        nameTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
+        phoneTxtField.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                nameTxtFieldKeyTyped(evt);
+                phoneTxtFieldKeyTyped(evt);
             }
         });
-        add(nameTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 195, 240, -1));
+        add(phoneTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 240, -1));
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
-        jLabel4.setText("Name          :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 195, 92, -1));
+        jLabel4.setText("Profile Photo          :");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(182, 350, 130, -1));
 
-        add(selectOrganizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(323, 160, 240, -1));
+        add(selectOrganizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 150, 240, -1));
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
-        jLabel3.setText("Organization: ");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 162, -1, -1));
+        jLabel3.setText("Organization  : ");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(204, 160, 100, -1));
 
         organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,6 +200,41 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
         jScrollPane1.setViewportView(employeeTable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 160, 355, 409));
+
+        ProfileTxtField.setBackground(new java.awt.Color(102, 102, 102));
+        add(ProfileTxtField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 150, 130));
+
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        jLabel7.setText("Sex          :");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 90, -1));
+
+        jLabel8.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        jLabel8.setText("Name          :");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 92, -1));
+
+        uploadBtn.setText("Upload");
+        uploadBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                uploadBtnActionPerformed(evt);
+            }
+        });
+        add(uploadBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 100, 20));
+
+        captureBtn.setText("Capture");
+        captureBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                captureBtnActionPerformed(evt);
+            }
+        });
+        add(captureBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, 110, 20));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 240, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -190,26 +244,26 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
     }//GEN-LAST:event_backBtnActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        if(nameTxtField.getText().isEmpty()){
+        if(phoneTxtField.getText().isEmpty()){
             JOptionPane.showMessageDialog(null,"Name text field can't be empty");
         }else{
             Organization organization =(Organization) selectOrganizationJComboBox.getSelectedItem();
-            String name = nameTxtField.getText();
+            String name = phoneTxtField.getText();
 
             organization.getEmployeeDirectory().createEmployee(name);
 
             populateTable(organization);
-            nameTxtField.setText("");
+            phoneTxtField.setText("");
         }
     }//GEN-LAST:event_addBtnActionPerformed
 
-    private void nameTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_nameTxtFieldKeyTyped
+    private void phoneTxtFieldKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_phoneTxtFieldKeyTyped
         char c= evt.getKeyChar();
         if(!(Character.isAlphabetic(c)) || (c==KeyEvent.VK_DELETE) || (c==KeyEvent.VK_BACK_SPACE))
         {
             evt.consume();
         }        // TODO add your handling code here:
-    }//GEN-LAST:event_nameTxtFieldKeyTyped
+    }//GEN-LAST:event_phoneTxtFieldKeyTyped
 
     private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
         Organization organization = (Organization)organizationJComboBox.getSelectedItem();
@@ -221,20 +275,54 @@ public class ManageOrganizationEmployee extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
+    private void uploadBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadBtnActionPerformed
+        JFileChooser browseImageFile = new JFileChooser();
+        FileNameExtensionFilter fnef = new FileNameExtensionFilter("IMAGES","png","jpg","jpeg");
+        browseImageFile.addChoosableFileFilter(fnef);
+        int ShowOpenDialogue = browseImageFile.showOpenDialog(null);
+        File selectedImageFile = browseImageFile.getSelectedFile();
+        selectedImagePath = selectedImageFile.getAbsolutePath();
+        //lblImageIcon.setVisible(true);
+        //Display image on jLablel1
+        ImageIcon ii = new ImageIcon(selectedImagePath);
+        //Resize image
+        Image image = ii.getImage().getScaledInstance(100,100, Image.SCALE_SMOOTH);
+        ProfileTxtField.setIcon(new ImageIcon(image));
+        ProfileTxtField.setVisible(true);
+        uploadBtn.setText("Change Image");
+    }//GEN-LAST:event_uploadBtnActionPerformed
+
+    private void captureBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_captureBtnActionPerformed
+        ComputerVision jf2 = new ComputerVision();
+        jf2.show();
+        jf2.setDefaultCloseOperation(jf2.DISPOSE_ON_CLOSE);
+        
+    }//GEN-LAST:event_captureBtnActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ProfileTxtField;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton backBtn;
+    private javax.swing.JButton captureBtn;
     private javax.swing.JTable employeeTable;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameTxtField;
     private javax.swing.JComboBox organizationJComboBox;
+    private javax.swing.JTextField phoneTxtField;
     private javax.swing.JComboBox selectOrganizationJComboBox;
+    private javax.swing.JButton uploadBtn;
     // End of variables declaration//GEN-END:variables
 }
 
