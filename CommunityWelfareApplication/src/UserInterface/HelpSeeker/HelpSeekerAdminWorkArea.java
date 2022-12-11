@@ -45,27 +45,32 @@ public class HelpSeekerAdminWorkArea extends javax.swing.JPanel {
         manageEmployeeBtn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         manageUserAccountBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        manageUserAccountBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pablita-woman-with-magnifier-looking-for-empoyees-online.png"))); // NOI18N
         manageUserAccountBtn.setText("MANAGE USER ACCOUNT");
         manageUserAccountBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageUserAccountBtnActionPerformed(evt);
             }
         });
-        add(manageUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 300, 266, 55));
+        add(manageUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 150, 266, 250));
 
         manageEmployeeBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        manageEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3d-casual-life-recruiter-having-an-online-job-interview.png"))); // NOI18N
         manageEmployeeBtn.setText("MANAGE EMPLOYEE");
         manageEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageEmployeeBtnActionPerformed(evt);
             }
         });
-        add(manageEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(322, 227, 266, 55));
+        add(manageEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 266, 250));
 
         jPanel3.setBackground(new java.awt.Color(66, 160, 236));
 
@@ -80,7 +85,7 @@ public class HelpSeekerAdminWorkArea extends javax.swing.JPanel {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(313, 313, 313)
                 .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(391, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -91,6 +96,19 @@ public class HelpSeekerAdminWorkArea extends javax.swing.JPanel {
         );
 
         add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 994, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel1.setText("Manage User Account");
+        jLabel1.setToolTipText("");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 420, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel2.setText("Manage Employee");
+        jLabel2.setToolTipText("");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/clip-1668.png"))); // NOI18N
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, 240, 210));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageUserAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageUserAccountBtnActionPerformed
@@ -111,7 +129,10 @@ public class HelpSeekerAdminWorkArea extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JButton manageEmployeeBtn;
     private javax.swing.JButton manageUserAccountBtn;

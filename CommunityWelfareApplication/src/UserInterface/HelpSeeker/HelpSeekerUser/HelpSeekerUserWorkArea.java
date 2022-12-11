@@ -166,15 +166,16 @@ public class HelpSeekerUserWorkArea extends javax.swing.JPanel {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NEU Affiliated Hospital", "Hospital List", "NGO List" }));
         jComboBox1.setToolTipText("");
-        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 480, 173, -1));
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 480, 173, 50));
 
-        btnOpenWeb.setText("Go");
+        btnOpenWeb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-natural-user-interface-2-50.png"))); // NOI18N
+        btnOpenWeb.setToolTipText("");
         btnOpenWeb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOpenWebActionPerformed(evt);
             }
         });
-        add(btnOpenWeb, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 480, 74, -1));
+        add(btnOpenWeb, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, 60, 50));
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel7.setText("Helpful Links!");
