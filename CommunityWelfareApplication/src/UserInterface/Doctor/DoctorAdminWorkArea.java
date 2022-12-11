@@ -53,7 +53,7 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        jPanel2.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel2.setBackground(new java.awt.Color(146, 199, 213));
 
         jLabel1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -120,7 +120,7 @@ public class DoctorAdminWorkArea extends javax.swing.JPanel {
             }
         });
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sammy-line-resume-form-1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3d-fluency-user-location.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
