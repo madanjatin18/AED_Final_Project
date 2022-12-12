@@ -38,6 +38,9 @@ public class VolunteerAdminWorkArea extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         manageEmployeeJBtn = new javax.swing.JButton();
         manageUserAccountJBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -53,37 +56,52 @@ public class VolunteerAdminWorkArea extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(356, Short.MAX_VALUE)
+                .addContainerGap(365, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(366, 366, 366))
+                .addGap(343, 343, 343))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addGap(43, 43, 43)
                 .addComponent(jLabel1)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 120));
 
         manageEmployeeJBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        manageEmployeeJBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3d-casual-life-recruiter-searching-for-new-employees.png"))); // NOI18N
         manageEmployeeJBtn.setText("MANAGE EMPLOYEE");
         manageEmployeeJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageEmployeeJBtnActionPerformed(evt);
             }
         });
-        add(manageEmployeeJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 204, 258, 70));
+        add(manageEmployeeJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 240, 200));
 
         manageUserAccountJBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        manageUserAccountJBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/woolly-computer-with-the-checkmark-confirming-the-user-is-logged-into-account.png"))); // NOI18N
         manageUserAccountJBtn.setText("MANAGE USER ACCOUNT");
         manageUserAccountJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageUserAccountJBtnActionPerformed(evt);
             }
         });
-        add(manageUserAccountJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 292, 258, 71));
+        add(manageUserAccountJBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 258, 200));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/volunteer2.jpg"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 330, 150));
+
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel3.setText("Manage User Account");
+        jLabel3.setToolTipText("");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 420, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel4.setText("Manage Employee");
+        jLabel4.setToolTipText("");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 420, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageEmployeeJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJBtnActionPerformed
@@ -103,6 +121,9 @@ public class VolunteerAdminWorkArea extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton manageEmployeeJBtn;
     private javax.swing.JButton manageUserAccountJBtn;
