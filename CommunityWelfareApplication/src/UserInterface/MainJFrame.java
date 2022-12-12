@@ -25,7 +25,7 @@ import javax.swing.Timer;
 
 /**
  *
- * @author rohan
+ * @author shivanishekhawat
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -97,7 +97,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jSplitPane1.setDividerLocation(145);
         jSplitPane1.setOrientation(javax.swing.JSplitPane.VERTICAL_SPLIT);
 
-        topJPanel.setBackground(new java.awt.Color(79, 162, 160));
+        topJPanel.setBackground(new java.awt.Color(102, 102, 102));
         topJPanel.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
@@ -125,7 +125,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(79, 162, 160));
+        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "LOGIN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Lucida Grande", 1, 18), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel1.setFont(new java.awt.Font("Malayalam MN", 0, 13)); // NOI18N
 
