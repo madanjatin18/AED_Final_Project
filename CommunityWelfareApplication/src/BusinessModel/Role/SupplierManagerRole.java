@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class SupplierManagerRole extends Role {

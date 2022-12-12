@@ -113,7 +113,8 @@ public class ManageUserAccount extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel1.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel1.setToolTipText("");
 
         backBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
         backBtn.setText("BACK");

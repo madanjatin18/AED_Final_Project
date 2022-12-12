@@ -16,7 +16,7 @@ import UserInterface.Doctor.DoctorUser.DoctorUserWorkArea;
 import javax.swing.JPanel;
 /**
  *
- * @author adhar
+ * @author madanjatin
  */
 public class DoctorUserRole extends Role{
     @Override

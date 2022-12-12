@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author hp
+ * @author akhileshdongre
  */
 public class DonorRole extends Role {
     

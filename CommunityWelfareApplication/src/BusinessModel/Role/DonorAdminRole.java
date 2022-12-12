@@ -15,7 +15,7 @@ import UserInterface.Donor.DonorAdminWorkArea;
 import UserInterface.Volunteer.VolunteerAdminWorkArea;
 /**
  *
- * @author adhar
+ * @author akhileshdongre
  */
 public class DonorAdminRole extends Role {
      @Override

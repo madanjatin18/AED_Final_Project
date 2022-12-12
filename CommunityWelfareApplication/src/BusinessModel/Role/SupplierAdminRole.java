@@ -20,7 +20,7 @@ import UserInterface.SupplierEnterprise.SupplierAdministratorWorkArea;
 
 /**
  *
- * @author hp
+ * @author shivanishekhawat
  */
 
 public class SupplierAdminRole extends Role {

@@ -6,6 +6,7 @@
 package UserInterface.HelpSeeker.HelpSeekerUser;
 import BusinessModel.EcoSystem;
 import BusinessModel.Enterprise.Enterprise;
+import BusinessModel.OpenWeb.OpenBrowser;
 import BusinessModel.Organization.Organization;
 import BusinessModel.UserAccount.UserAccount;
 import BusinessModel.WorkQueue.HelpSeekerWorkReq;
@@ -63,11 +64,15 @@ public class HelpSeekerUserWorkArea extends javax.swing.JPanel {
         locationTextField = new javax.swing.JTextField();
         postRequestBtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        btnOpenWeb = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel1.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel1.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -99,7 +104,7 @@ public class HelpSeekerUserWorkArea extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(backBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 994, -1));
@@ -159,6 +164,23 @@ public class HelpSeekerUserWorkArea extends javax.swing.JPanel {
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 2, 10)); // NOI18N
         jLabel5.setText("*Please input \"Hospital\" as subject for Hospital/Doctor related Help. ");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(545, 376, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "NEU Affiliated Hospital", "Hospital List", "NGO List" }));
+        jComboBox1.setToolTipText("");
+        add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 480, 173, 50));
+
+        btnOpenWeb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-natural-user-interface-2-50.png"))); // NOI18N
+        btnOpenWeb.setToolTipText("");
+        btnOpenWeb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOpenWebActionPerformed(evt);
+            }
+        });
+        add(btnOpenWeb, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 480, 60, 50));
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel7.setText("Helpful Links!");
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 450, 140, -1));
     }// </editor-fold>//GEN-END:initComponents
     public void populateWorkQueueTable(){
          DefaultTableModel model = (DefaultTableModel) requestJTable.getModel();
@@ -223,16 +245,39 @@ public class HelpSeekerUserWorkArea extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_postRequestBtnActionPerformed
 
+    private void btnOpenWebActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpenWebActionPerformed
+        // TODO add your handling code here:
+        String url = (String)jComboBox1.getSelectedItem();
+        String urlFinal;
+        if(url == "NEU Affiliated Hospital")
+        {
+            urlFinal = "https://www.google.com/maps/place/Beth+Israel+Deaconess+Medical+Center/@42.3396063,-71.1750198,13z/data=!4m10!1m2!2m1!1sbeth+israel!3m6!1s0x89e3798da35fdbc7:0xcd19c9c853764aa7!8m2!3d42.3396063!4d-71.104982!15sCgtiZXRoIGlzcmFlbJIBDm1lZGljYWxfY2VudGVy4AEA!16s%2Fm%2F04g3n2g";
+        }
+        else if(url == "Hospital List")
+        {
+            urlFinal = "https://www.international-health-cover.com/resources/usa/usa-hospital-list.html";
+        }
+        else
+        {
+            urlFinal = "https://www.transparenthands.org/list-of-top-ngos-in-usa/";
+        }
+        
+        OpenBrowser.openURL(urlFinal);
+    }//GEN-LAST:event_btnOpenWebActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backBtn;
+    private javax.swing.JButton btnOpenWeb;
     private javax.swing.JTextArea descriptionJTextArea;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane3;

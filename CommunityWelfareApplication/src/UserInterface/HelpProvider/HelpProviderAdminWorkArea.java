@@ -44,11 +44,13 @@ public class HelpProviderAdminWorkArea extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         manageUserAccountBtn = new javax.swing.JButton();
         manageEmployeeBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel1.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel1.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -58,38 +60,41 @@ public class HelpProviderAdminWorkArea extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(302, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(304, 304, 304)
                 .addComponent(jLabel1)
-                .addGap(307, 307, 307))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(57, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addGap(51, 51, 51))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 140));
 
-        manageUserAccountBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        manageUserAccountBtn.setFont(new java.awt.Font("Century Schoolbook", 1, 13)); // NOI18N
+        manageUserAccountBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pablita-woman-with-magnifier-looking-for-empoyees-online.png"))); // NOI18N
         manageUserAccountBtn.setText("MANAGE USER ACCOUNT");
         manageUserAccountBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageUserAccountBtnActionPerformed(evt);
             }
         });
-        add(manageUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 277, 266, 55));
+        add(manageUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 420, 500, 200));
 
-        manageEmployeeBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        manageEmployeeBtn.setFont(new java.awt.Font("Century Schoolbook", 1, 13)); // NOI18N
+        manageEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/juicy-teamwork-power.png"))); // NOI18N
         manageEmployeeBtn.setText("MANAGE EMPLOYEE");
         manageEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageEmployeeBtnActionPerformed(evt);
             }
         });
-        add(manageEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 209, 266, 55));
+        add(manageEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 200, 470, 190));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 990, 630));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageUserAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageUserAccountBtnActionPerformed
@@ -111,6 +116,7 @@ public class HelpProviderAdminWorkArea extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton manageEmployeeBtn;
     private javax.swing.JButton manageUserAccountBtn;
