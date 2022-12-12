@@ -113,6 +113,7 @@ public class ComputerVision extends javax.swing.JFrame {
             .addComponent(display, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        startBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-start-32.png"))); // NOI18N
         startBtn.setText("START CAMERA");
         startBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,6 +121,7 @@ public class ComputerVision extends javax.swing.JFrame {
             }
         });
 
+        stopBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-stop-gesture-32.png"))); // NOI18N
         stopBtn.setText("STOP");
         stopBtn.setEnabled(false);
         stopBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -128,6 +130,7 @@ public class ComputerVision extends javax.swing.JFrame {
             }
         });
 
+        captureBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-compact-camera-32.png"))); // NOI18N
         captureBtn.setText("CAPTURE");
         captureBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

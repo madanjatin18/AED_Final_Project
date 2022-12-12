@@ -46,6 +46,9 @@ public class SupplierAdministratorWorkArea extends javax.swing.JPanel {
         mngOrganisationBtn = new javax.swing.JButton();
         mngEmployeeBtn = new javax.swing.JButton();
         mngUserAccountBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -61,43 +64,61 @@ public class SupplierAdministratorWorkArea extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(358, 358, 358)
+                .addGap(347, 347, 347)
                 .addComponent(jLabel1)
-                .addContainerGap(414, Short.MAX_VALUE))
+                .addContainerGap(425, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(46, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addGap(32, 32, 32))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 994, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 994, 110));
 
+        mngOrganisationBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/urban-time-management.png"))); // NOI18N
         mngOrganisationBtn.setText("Manage Organization");
         mngOrganisationBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngOrganisationBtnActionPerformed(evt);
             }
         });
-        add(mngOrganisationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 278, 213, 55));
+        add(mngOrganisationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 213, 220));
 
+        mngEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/casual-life-3d-recruiter-woman-having-online-interview.png"))); // NOI18N
         mngEmployeeBtn.setText("Manage Organization Employee");
         mngEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngEmployeeBtnActionPerformed(evt);
             }
         });
-        add(mngEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 340, -1, 52));
+        add(mngEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 230, 220));
 
+        mngUserAccountBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/silky-icon-several-people.png"))); // NOI18N
         mngUserAccountBtn.setText("Manage User Account");
         mngUserAccountBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngUserAccountBtnActionPerformed(evt);
             }
         });
-        add(mngUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(378, 405, 213, 53));
+        add(mngUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 170, 213, 220));
+
+        jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel2.setText("Manage Organization Employee");
+        jLabel2.setToolTipText("");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel3.setText("Manage User Account");
+        jLabel3.setToolTipText("");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 410, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel4.setText("Manage Organization");
+        jLabel4.setToolTipText("");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mngOrganisationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngOrganisationBtnActionPerformed
@@ -127,6 +148,9 @@ public class SupplierAdministratorWorkArea extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton mngEmployeeBtn;
     private javax.swing.JButton mngOrganisationBtn;
