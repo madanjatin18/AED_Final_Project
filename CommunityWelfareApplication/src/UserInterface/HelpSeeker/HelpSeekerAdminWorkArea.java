@@ -72,7 +72,8 @@ public class HelpSeekerAdminWorkArea extends javax.swing.JPanel {
         });
         add(manageEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, 266, 250));
 
-        jPanel3.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel3.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel3.setToolTipText("");
 
         jLabel3.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
