@@ -17,7 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
  *
- * @author adhar
+ * @author madanjatin
  */
 public class DoctorAdminRole extends Role{
 

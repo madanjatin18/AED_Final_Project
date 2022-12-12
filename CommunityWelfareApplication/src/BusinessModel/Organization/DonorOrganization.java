@@ -6,8 +6,8 @@
 package BusinessModel.Organization;
 import BusinessModel.Role.Role;
 import BusinessModel.Role.DonorRole;
-import Business.Supplier.Donor;
-import Business.Supplier.DonorDirectory;
+import BusinessModel.Supplier.Donor;
+import BusinessModel.Supplier.DonorDirectory;
 import java.util.HashSet;
 
 /**

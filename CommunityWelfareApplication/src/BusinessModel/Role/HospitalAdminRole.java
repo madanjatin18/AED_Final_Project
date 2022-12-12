@@ -12,7 +12,7 @@ import UserInterface.HospitalEnterPrise.HospitalAdminWorkArea;
 import javax.swing.JPanel;
 /**
  *
- * @author adhar
+ * @author madanjatin
  */
 public class HospitalAdminRole extends Role{
     @Override

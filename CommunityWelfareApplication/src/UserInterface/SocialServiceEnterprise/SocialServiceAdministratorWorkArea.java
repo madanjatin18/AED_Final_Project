@@ -46,11 +46,14 @@ public class SocialServiceAdministratorWorkArea extends javax.swing.JPanel {
         mngOrganisationBtn = new javax.swing.JButton();
         mngEmployeeBtn = new javax.swing.JButton();
         mngUserAccountBtn = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel1.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel1.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -75,29 +78,44 @@ public class SocialServiceAdministratorWorkArea extends javax.swing.JPanel {
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 994, -1));
 
+        mngOrganisationBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        mngOrganisationBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-related-companies-40.png"))); // NOI18N
         mngOrganisationBtn.setText("Manage Organization");
         mngOrganisationBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngOrganisationBtnActionPerformed(evt);
             }
         });
-        add(mngOrganisationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 230, 213, 53));
+        add(mngOrganisationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 360, 53));
 
+        mngEmployeeBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        mngEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-organization-32.png"))); // NOI18N
         mngEmployeeBtn.setText("Manage Organization Employee");
         mngEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngEmployeeBtnActionPerformed(evt);
             }
         });
-        add(mngEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 301, 210, 46));
+        add(mngEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 360, 50));
 
+        mngUserAccountBtn.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        mngUserAccountBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icons8-user-account-skin-type-7-48.png"))); // NOI18N
         mngUserAccountBtn.setText("Manage User Account");
         mngUserAccountBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngUserAccountBtnActionPerformed(evt);
             }
         });
-        add(mngUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 365, 213, 52));
+        add(mngUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 360, 52));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/social.png"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 260, 200));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(81, 179, 228));
+        jLabel3.setText("“The best way to find yourself is to lose yourself in the service of others.”");
+        jLabel3.setToolTipText("");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 480, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mngOrganisationBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngOrganisationBtnActionPerformed
@@ -127,6 +145,8 @@ public class SocialServiceAdministratorWorkArea extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton mngEmployeeBtn;
     private javax.swing.JButton mngOrganisationBtn;

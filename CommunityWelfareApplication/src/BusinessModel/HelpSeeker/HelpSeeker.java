@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package BusinessModel.HelpSeeker;
-import Business.WorkQueue.WorkQueue;
+import BusinessModel.WorkQueue.WorkQueue;
 
 /**
  *

@@ -35,6 +35,7 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
      */
     public ManageEnterpriseAdministrator(JPanel downJPanel, EcoSystem ecosystem) {
         initComponents();
+        UpdtBtn.setVisible(false);
         this.downJPanel = downJPanel;
         this.ecosystem = ecosystem;
         populateJTable();
@@ -111,11 +112,14 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         passwordTxtField = new javax.swing.JPasswordField();
         addBtn = new javax.swing.JButton();
         deleteBtn = new javax.swing.JButton();
+        View = new javax.swing.JButton();
+        UpdtBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel1.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel1.setToolTipText("");
 
         backBtn.setText("Back");
         backBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -207,6 +211,22 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
             }
         });
         add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 362, 112, 28));
+
+        View.setText("View");
+        View.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewActionPerformed(evt);
+            }
+        });
+        add(View, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 110, 30));
+
+        UpdtBtn.setText("Update");
+        UpdtBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdtBtnActionPerformed(evt);
+            }
+        });
+        add(UpdtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
@@ -217,9 +237,11 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
     }//GEN-LAST:event_networkJComboBoxActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        Enterprise enterprise = (Enterprise) enterpriseTypeJComboBox.getSelectedItem();
+Enterprise enterprise = (Enterprise) enterpriseTypeJComboBox.getSelectedItem();
 
-        String username = usernameTxtField.getText();
+
+
+       String username = usernameTxtField.getText();
         String password = String.valueOf(passwordTxtField.getPassword());
         String name = nameTxtField.getText();
         
@@ -229,7 +251,9 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         }
         else{
 
-        Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
+
+
+       Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
         if (EcoSystem.checkIfUsernameIsUnique(username)) {
             UserAccount account = null;
             if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.SocialService) {
@@ -237,14 +261,18 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
             } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Supplier) {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new SupplierAdminRole());
 
-            } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.NGO) {
+
+
+           } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.NGO) {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new NGOAdminRole());
             }
             else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Hospital) {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password, employee, new HospitalAdminRole());
             }
 
-            populateJTable();
+
+
+           populateJTable();
             usernameTxtField.setText("");
             passwordTxtField.setText("");
             nameTxtField.setText("");
@@ -252,7 +280,8 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         else {
             JOptionPane.showMessageDialog(null, "Please enter a unique username!", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-        }
+        }      
+     
     }//GEN-LAST:event_addBtnActionPerformed
 
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
@@ -298,8 +327,46 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         layout.previous(downJPanel);
     }//GEN-LAST:event_backBtnActionPerformed
 
+    private void UpdtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdtBtnActionPerformed
+        // TODO add your handling code here:
+         int selectedRowIndex = enterpriseAdminJTable.getSelectedRow();
+        String pass = String.valueOf(passwordTxtField.getPassword());
+        DefaultTableModel model = (DefaultTableModel) enterpriseAdminJTable.getModel();
+        UserAccount selectedPersonDetails = (UserAccount) model.getValueAt(selectedRowIndex, 2);
+        
+        if(pass.equals("")){
+            JOptionPane.showMessageDialog(null, "Password cannot be empty");
+                return;
+        }
+        else{
+        JOptionPane.showMessageDialog(null, "Password Updated");
+        selectedPersonDetails.setPassword(pass);
+        }          
+    }//GEN-LAST:event_UpdtBtnActionPerformed
+
+    private void ViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = enterpriseAdminJTable.getSelectedRow();
+        if (selectedRowIndex < 0){
+            JOptionPane.showMessageDialog(this, "Please Select a Row to View.");
+            return;
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) enterpriseAdminJTable.getModel();
+        
+        UserAccount selectedPersonDetails = (UserAccount) model.getValueAt(selectedRowIndex, 2);
+        usernameTxtField.setText(selectedPersonDetails.getUsername());
+        passwordTxtField.setText(selectedPersonDetails.getPassword());
+        JOptionPane.showMessageDialog(null, "You can Only Change Password");
+        usernameTxtField.setEditable(false);
+        nameTxtField.setEditable(false);
+        UpdtBtn.setVisible(true);
+    }//GEN-LAST:event_ViewActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton UpdtBtn;
+    private javax.swing.JButton View;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton backBtn;
     private javax.swing.JButton deleteBtn;

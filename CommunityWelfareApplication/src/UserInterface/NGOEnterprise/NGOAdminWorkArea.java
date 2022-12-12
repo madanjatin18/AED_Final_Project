@@ -46,11 +46,18 @@ public class NGOAdminWorkArea extends javax.swing.JPanel {
         mngUserAccountBtn = new javax.swing.JButton();
         mngEmployeeBtn = new javax.swing.JButton();
         mngOrganisationBtn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setToolTipText("");
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(66, 160, 236));
+        jPanel1.setBackground(new java.awt.Color(146, 199, 213));
+        jPanel1.setToolTipText("");
 
         jLabel1.setFont(new java.awt.Font("Malayalam MN", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -63,41 +70,69 @@ public class NGOAdminWorkArea extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(411, 411, 411)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(460, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel1)
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1025, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1050, 110));
 
-        mngUserAccountBtn.setText("Manage User Account");
+        mngUserAccountBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/flame-563.png"))); // NOI18N
+        mngUserAccountBtn.setToolTipText("");
         mngUserAccountBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngUserAccountBtnActionPerformed(evt);
             }
         });
-        add(mngUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 488, 241, 52));
+        add(mngUserAccountBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 140, 280, 250));
 
+        mngEmployeeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Employee-Management-Meaning-Importance-Tips-Tools---More.png"))); // NOI18N
         mngEmployeeBtn.setText("Manage Organization Employee");
+        mngEmployeeBtn.setHideActionText(true);
         mngEmployeeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngEmployeeBtnActionPerformed(evt);
             }
         });
-        add(mngEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 416, 241, 54));
+        add(mngEmployeeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 140, 290, 250));
 
+        mngOrganisationBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/sammy-line-man-plans-tasks-in-a-kanban-board.png"))); // NOI18N
         mngOrganisationBtn.setText("Manage Organization");
         mngOrganisationBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mngOrganisationBtnActionPerformed(evt);
             }
         });
-        add(mngOrganisationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 348, 241, 50));
+        add(mngOrganisationBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 260, 250));
+
+        jLabel3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel3.setText("Manage Organization Employee");
+        jLabel3.setToolTipText("");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel4.setText("Manage User Account");
+        jLabel4.setToolTipText("");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 410, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel5.setText("Manage Organization");
+        jLabel5.setToolTipText("");
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ezgif.com-gif-maker (1).gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 200, 210));
+
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(110, 110, 187));
+        jLabel6.setText("As we work to create light for others, we naturally light our own way.");
+        jLabel6.setToolTipText("");
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 670, 770, 90));
     }// </editor-fold>//GEN-END:initComponents
 
     private void mngUserAccountBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngUserAccountBtnActionPerformed
@@ -127,6 +162,11 @@ public class NGOAdminWorkArea extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton mngEmployeeBtn;
     private javax.swing.JButton mngOrganisationBtn;

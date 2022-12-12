@@ -7,7 +7,7 @@ package BusinessModel.Organization;
 import BusinessModel.Role.Role;
 import BusinessModel.Role.SupplierAdminRole;
 import BusinessModel.Role.SupplierManagerRole;
-import Business.Supplier.SupplierDirectory;
+import BusinessModel.Supplier.SupplierDirectory;
 import java.util.HashSet;
 
 /**
