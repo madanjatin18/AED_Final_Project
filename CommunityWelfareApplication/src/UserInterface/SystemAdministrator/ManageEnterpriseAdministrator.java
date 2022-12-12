@@ -3,19 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.SystemAdministrator;
+package Interface.SystemAdministrator;
 
 
 
-import BusinessModel.EcoSystem;
-import BusinessModel.Employee.Employee;
-import BusinessModel.Enterprise.Enterprise;
-import BusinessModel.Network.Network;
-import BusinessModel.Role.HospitalAdminRole;
-import BusinessModel.Role.SocialServiceAdminRole;
-import BusinessModel.Role.SupplierAdminRole;
-import BusinessModel.Role.NGOAdminRole;
-import BusinessModel.UserAccount.UserAccount;
+import Business.EcoSystem;
+import Business.Employee.Employee;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Role.HospitalAdminRole;
+import Business.Role.SocialServiceAdminRole;
+import Business.Role.SupplierAdminRole;
+import Business.Role.NGOAdminRole;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author madanjatin
+ * @author rohan
  */
 public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
 
@@ -39,6 +39,7 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         this.ecosystem = ecosystem;
         populateJTable();
         populateNetworkJComboBox();
+        UpdtBtn.setVisible(false);
         
     }
 
@@ -111,6 +112,8 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         passwordTxtField = new javax.swing.JPasswordField();
         addBtn = new javax.swing.JButton();
         deleteBtn = new javax.swing.JButton();
+        View = new javax.swing.JButton();
+        UpdtBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -207,6 +210,24 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
             }
         });
         add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(296, 362, 112, 28));
+
+        View.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        View.setText("View");
+        View.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewActionPerformed(evt);
+            }
+        });
+        add(View, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 110, 30));
+
+        UpdtBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        UpdtBtn.setText("Update");
+        UpdtBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdtBtnActionPerformed(evt);
+            }
+        });
+        add(UpdtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 400, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
@@ -293,13 +314,56 @@ public class ManageEnterpriseAdministrator extends javax.swing.JPanel {
         Component component = componentArray[componentArray.length - 1];
         
         SystemAdministratorWorkArea sysAdminwjp = (SystemAdministratorWorkArea) component;
-        //sysAdminwjp.populateTree(); //commented for populateTree on 3rd Dec 2022
+        sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) downJPanel.getLayout();
         layout.previous(downJPanel);
     }//GEN-LAST:event_backBtnActionPerformed
 
+    private void ViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewActionPerformed
+        // TODO add your handling code here:
+//        Per_Update_Save_Btn.setVisible(false);
+        int selectedRowIndex = enterpriseAdminJTable.getSelectedRow();
+        if (selectedRowIndex < 0){
+            JOptionPane.showMessageDialog(this, "Please Select a Row to View.");
+            return;
+        }
+        
+        DefaultTableModel model = (DefaultTableModel) enterpriseAdminJTable.getModel();
+        
+        UserAccount selectedPersonDetails = (UserAccount) model.getValueAt(selectedRowIndex, 2);
+        usernameTxtField.setText(selectedPersonDetails.getUsername());
+        passwordTxtField.setText(selectedPersonDetails.getPassword());
+        JOptionPane.showMessageDialog(null, "You can Only Change Password");
+        usernameTxtField.setEditable(false);
+        nameTxtField.setEditable(false);
+        UpdtBtn.setVisible(true);
+        
+//        nameTxtField.setText(selectedPersonDetails.getRole());
+        
+        
+    }//GEN-LAST:event_ViewActionPerformed
+
+    private void UpdtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdtBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = enterpriseAdminJTable.getSelectedRow();
+        String pass = String.valueOf(passwordTxtField.getPassword());
+        DefaultTableModel model = (DefaultTableModel) enterpriseAdminJTable.getModel();
+        UserAccount selectedPersonDetails = (UserAccount) model.getValueAt(selectedRowIndex, 2);
+        
+        if(pass.equals("")){
+            JOptionPane.showMessageDialog(null, "Password cannot be empty");
+                return;
+        }
+        else{
+        
+        selectedPersonDetails.setPassword(pass);
+        }
+    }//GEN-LAST:event_UpdtBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton UpdtBtn;
+    private javax.swing.JButton View;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton backBtn;
     private javax.swing.JButton deleteBtn;
