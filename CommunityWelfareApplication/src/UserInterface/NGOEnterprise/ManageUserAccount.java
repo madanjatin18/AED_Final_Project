@@ -3,28 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UserInterface.NGOEnterprise;
-import BusinessModel.EcoSystem;
-import BusinessModel.Employee.Employee;
-import BusinessModel.Enterprise.Enterprise;
-import BusinessModel.Organization.HelpProviderOrganization;
-import BusinessModel.Organization.HelpSeekerOrganization;
-import BusinessModel.Organization.NGOOrganization;
-import BusinessModel.Organization.Organization;
-import BusinessModel.Organization.VolunteerOrganization;
-import BusinessModel.Role.HelpProviderAdminRole;
-import BusinessModel.Role.HelpSeekerAdminRole;
-import BusinessModel.Role.NGOManagerRole;
-import BusinessModel.Role.Role;
-import BusinessModel.Role.VolunteerAdminRole;
-import BusinessModel.UserAccount.UserAccount;
+package Interface.NGOEnterprise;
+import Business.EcoSystem;
+import Business.Employee.Employee;
+import Business.Enterprise.Enterprise;
+import Business.Organization.HelpProviderOrganization;
+import Business.Organization.HelpSeekerOrganization;
+import Business.Organization.NGOOrganization;
+import Business.Organization.Organization;
+import Business.Organization.VolunteerOrganization;
+import Business.Role.HelpProviderAdminRole;
+import Business.Role.HelpSeekerAdminRole;
+import Business.Role.NGOManagerRole;
+import Business.Role.Role;
+import Business.Role.VolunteerAdminRole;
+import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author madanjatin
+ * @author akhileshdongre
  */
 public class ManageUserAccount extends javax.swing.JPanel {
     private JPanel downJPanel;
@@ -116,6 +116,9 @@ public class ManageUserAccount extends javax.swing.JPanel {
         employeeJComboBox = new javax.swing.JComboBox();
         jScrollPane1 = new javax.swing.JScrollPane();
         userTable = new javax.swing.JTable();
+        deleteBtn = new javax.swing.JButton();
+        View = new javax.swing.JButton();
+        UpdtBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -181,7 +184,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
                 addBtnActionPerformed(evt);
             }
         });
-        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 368, 97, -1));
+        add(addBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 361, 100, 30));
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
         jLabel3.setText("Employee    :");
@@ -217,6 +220,37 @@ public class ManageUserAccount extends javax.swing.JPanel {
         jScrollPane1.setViewportView(userTable);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 164, 357, 331));
+
+        deleteBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        deleteBtn.setText("Delete");
+        deleteBtn.setMaximumSize(new java.awt.Dimension(57, 23));
+        deleteBtn.setMinimumSize(new java.awt.Dimension(57, 23));
+        deleteBtn.setPreferredSize(new java.awt.Dimension(57, 23));
+        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtnActionPerformed(evt);
+            }
+        });
+        add(deleteBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 360, 100, 30));
+
+        View.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        View.setText("View");
+        View.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ViewActionPerformed(evt);
+            }
+        });
+        add(View, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 400, 100, 30));
+
+        UpdtBtn.setFont(new java.awt.Font("Century Gothic", 0, 13)); // NOI18N
+        UpdtBtn.setText("Update");
+        UpdtBtn.setPreferredSize(new java.awt.Dimension(62, 23));
+        UpdtBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UpdtBtnActionPerformed(evt);
+            }
+        });
+        add(UpdtBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 400, 100, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBtnActionPerformed
@@ -241,7 +275,7 @@ public class ManageUserAccount extends javax.swing.JPanel {
 
                 populateData();
                 usernameTxtField.setText("");
-                 passwordTxtField.setText("");
+                passwordTxtField.setText("");
             }
             else{
                 JOptionPane.showMessageDialog(null,  "Enter unique username", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -256,11 +290,82 @@ public class ManageUserAccount extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_organizationJComboBoxActionPerformed
 
+    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = userTable.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "Please select a row to delete!", "Warning", JOptionPane.WARNING_MESSAGE);
+        }
+        else
+        {
+
+            UserAccount p = (UserAccount) userTable.getValueAt(selectedRow, 0);
+
+            
+                for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
+                    for (UserAccount ua : organization.getUserAccountDirectory().getUserAccountList()) {
+                        if (p == ua) {
+                            organization.getUserAccountDirectory().getUserAccountList().remove(p);
+                            break;
+                        }
+
+                    }
+                }
+            
+
+            JOptionPane.showMessageDialog(null, "Account successfully deleted!");
+            populateData();
+        }
+    }//GEN-LAST:event_deleteBtnActionPerformed
+
+    private void ViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewActionPerformed
+        // TODO add your handling code here:
+        //        Per_Update_Save_Btn.setVisible(false);
+        int selectedRowIndex = userTable.getSelectedRow();
+        if (selectedRowIndex < 0){
+            JOptionPane.showMessageDialog(this, "Please Select a Row to View.");
+            return;
+        }
+
+        DefaultTableModel model = (DefaultTableModel) userTable.getModel();
+
+        UserAccount selectedPersonDetails = (UserAccount) model.getValueAt(selectedRowIndex, 0);
+        usernameTxtField.setText(selectedPersonDetails.getUsername());
+        passwordTxtField.setText(selectedPersonDetails.getPassword());
+        JOptionPane.showMessageDialog(null, "You can Only Change Password");
+        usernameTxtField.setEditable(false);
+//        nameTxtField.setEditable(false);
+        UpdtBtn.setVisible(true);
+
+        //        nameTxtField.setText(selectedPersonDetails.getRole());
+
+    }//GEN-LAST:event_ViewActionPerformed
+
+    private void UpdtBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdtBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRowIndex = userTable.getSelectedRow();
+        String pass = String.valueOf(passwordTxtField.getPassword());
+        DefaultTableModel model = (DefaultTableModel) userTable.getModel();
+        UserAccount selectedPersonDetails = (UserAccount) model.getValueAt(selectedRowIndex, 0);
+
+        if(pass.equals("")){
+            JOptionPane.showMessageDialog(null, "Password cannot be empty");
+            return;
+        }
+        else{
+
+            selectedPersonDetails.setPassword(pass);
+        }
+    }//GEN-LAST:event_UpdtBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox EmployeeRoleJComboBox;
+    private javax.swing.JButton UpdtBtn;
+    private javax.swing.JButton View;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton backBtn;
+    private javax.swing.JButton deleteBtn;
     private javax.swing.JComboBox employeeJComboBox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
